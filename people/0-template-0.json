@@ -1,0 +1,39 @@
+{
+  "id": <id number>
+  "engName": "<english name>",
+  "number": <eg charles ii>,
+  "name": [
+    "<other names>"
+  ],
+  "epithet": [
+    "<eg el hechizado>"
+  ],
+  
+  "birthday": {
+    "year": <year>, "month": <month>, "day": <day>
+  },
+  
+  "deathday": {
+    "year": <year>, "month": <month>, "day": <day>
+  },
+  
+  "title": {
+    "<eg king of england>": {
+      "start": {
+        "year": <year>, "month": <month>, "day": <day>
+      },
+      "end": {
+        "year": <year>, "month": <month>, "day": <day>
+      }
+    }
+  },
+  
+  "sex": "<lower case>",
+  "ethnicity": "<eg Anglo-Saxon>",
+  
+  "mother": "<mother english name>",
+  "father": "<father english name>",
+  "children": [
+    "children english names"
+  ]
+}
