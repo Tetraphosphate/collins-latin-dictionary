@@ -42,6 +42,9 @@
   
   "mother": "Osburh",
   "father": "Æthelwulf",
+  "spouse": [
+    "Ealhswith"
+  ]
   "children": [
     "Æthelflæd",
     "Edward",
