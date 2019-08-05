@@ -34,6 +34,6 @@
   "mother": "<mother english name>",
   "father": "<father english name>",
   "children": [
-    "children english names"
+    "<children english names>"
   ]
 }
