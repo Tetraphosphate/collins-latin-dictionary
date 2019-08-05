@@ -1,0 +1,41 @@
+{
+  "id": 1,
+  "engName": "Charles",
+  "number": 2,
+  "name": [
+    "Carlos"
+  ],
+  "epithet": [
+    "El Hechizado"
+  ],
+  
+  "birthday": {
+    "year": 1661, "month": 11, "day": 6
+  },
+  
+  "deathday": {
+    "year": 1700, "month": 11, "day": 1
+  },
+  
+  "title": {
+    "King of Castile, of León, of Aragon, of the Two Sicilies, of Jerusalem, of Hungary, of Dalmatia, of Croatia, of Navarre, of Granada, of Toledo, of Valencia, of Galicia, of Mallorca, of Seville, of Sardinia, of Córdoba, of Corsica, of Murcia, of Jaén, of the Algarves, of Algeciras, of Gibraltar, of the Canary Islands, of the East and West Indies, of the Islands and Mainland of the Ocean Sea; Archduke of Austria; Duke of Burgundy, of Brabant, of Milan, of Athens and Neopatria; Count of Habsburg, of Flanders, of Tyrol, of Barcelona, of Roussillon, and of Cerdanya; Marquess of Oristano and Count of Goceano": {
+      "start": {
+        "year": 1665, "month": 9, "day": 17
+      },
+      "end": {
+        "year": 1700, "month": 11, "day": 1
+      }
+    }
+  },
+  
+  "sex": "male",
+  "ethnicity": "Spanish",
+  
+  "mother": "Mariana",
+  "father": "Philip",
+  "spouse": [
+    "Mary Louise",
+    "Maria Anna"
+  ]
+  "children": []
+}
