@@ -1,0 +1,52 @@
+{
+  "id": 0,
+  "engName": "Alfred",
+  "number": null,
+  "name": [
+    "Ælfrēd",
+    "Ælfrǣd"
+  ],
+  "epithet": [
+    "the Great"
+  ],
+  
+  "birthday": {
+    "year": 848, "month": null, "day": null
+  },
+  
+  "deathday": {
+    "year": 899, "month": 10, "day": 26
+  },
+  
+  "title": {
+    "King of the West Saxons": {
+      "start": {
+        "year": 871, "month": 4, "day": 23
+      },
+      "end": {
+        "year": 886, "month": null, "day": null
+      }
+    },
+    "King of the Anglo-Saxons": {
+      "start": {
+        "year": 886, "month": null, "day": null
+      },
+      "end": {
+        "year": 899, "month": 10, "day": 26
+      }
+    }
+  },
+  
+  "sex": "male",
+  "ethnicity": "Anglo-Saxon",
+  
+  "mother": "Osburh",
+  "father": "Æthelwulf",
+  "children": [
+    "Æthelflæd",
+    "Edward",
+    "Æthelgifu",
+    "Ælfthryth",
+    "Æthelweard"
+  ]
+}
