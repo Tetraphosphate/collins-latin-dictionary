@@ -56,38 +56,13 @@ var mathNode = function(tex) {
   return '<span style="width: 5em;display:inline-block">\\[' + tex + '\\]</span>';
 }
 
-g.setNode("start", { labelType: 'html', label: mathNode('\\mathfrak{c}'), width: 120, height: 10, class: 'root' });
-g.setNode("cofn", { labelType: 'html', label:  mathNode('\\mathsf{cof} (\\mathcal{N})'), width: 120, height: 50 });
-g.setNode("cofm", { labelType: 'html', label:  mathNode('\\mathsf{cof} (\\mathcal{M})'), width: 120, height: 50 });
-g.setNode("covn", { labelType: 'html', label:  mathNode('\\mathsf{cov} (\\mathcal{N})'), width: 120, height: 50 });
-g.setNode("covm", { labelType: 'html', label:  mathNode('\\mathsf{cov} (\\mathcal{M})'), width: 120, height: 50 });
-g.setNode("nonn", { labelType: 'html', label:  mathNode('\\mathsf{non} (\\mathcal{N})'), width: 120, height: 50 });
-g.setNode("nonm", { labelType: 'html', label:  mathNode('\\mathsf{non} (\\mathcal{M})'), width: 120, height: 50 });
-g.setNode("addn", { labelType: 'html', label:  mathNode('\\mathsf{add} (\\mathcal{N})'), width: 120, height: 50 });
-g.setNode("addm", { labelType: 'html', label:  mathNode('\\mathsf{add} (\\mathcal{M})'), width: 120, height: 50 });
-g.setNode("b", { labelType: 'html', label:  mathNode('\\mathfrak{b}'), width: 120, height: 50 });
-g.setNode("d", { labelType: 'html', label:  mathNode('\\mathfrak{d}'), width: 120, height: 50 });
-g.setNode("aleph1", { labelType: 'html', label:  mathNode('\\\aleph_1'), width: 120, height: 50 });
-
+g.setNode("charles",  { label: "Charles II of Spain",   width: 120, height: 10 });
+g.setNode("philip",   { label: "Philip IV of Spain",    width: 120, height: 10 });
+g.setNode("marianna", { label: "Maria Anna of Austria", width: 120, height: 10 });
 
 
 // Add edges
-g.setEdge("start", "cofn");
-g.setEdge("cofn", "cofm");
-g.setEdge("cofn", "nonn");
-g.setEdge("cofm", "nonm");
-g.setEdge("nonm", "covn");
-g.setEdge("cofm", "d");
-g.setEdge("nonm", "b");
-g.setEdge("d", "b");
-g.setEdge("nonm", "covn");
-g.setEdge("covn","addn");
-g.setEdge("addn", "aleph1");
-g.setEdge("addm", "addn");
-g.setEdge("covm", "addm");
-g.setEdge("b", "addm");
-g.setEdge("d", "covm");
-g.setEdge("nonn", "covm");
+g.setEdge("philip", "charles");
 
 // Render
 
