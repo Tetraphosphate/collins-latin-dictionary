@@ -92,14 +92,17 @@
 
 
     // Add edges
-    g.setEdge("philipiv",  "charles",     { arrowhead: "undirected" });
-    g.setEdge("marianaii", "charles",     { arrowhead: "undirected" });
-    g.setEdge("philipiii", "philipiv",    { arrowhead: "undirected" });
-    g.setEdge("margareti", "philipiv",    { arrowhead: "undirected" });
-    g.setEdge("ferdinand", "marianaii",   { arrowhead: "undirected" });
-    g.setEdge("marianai",  "marianaii",   { arrowhead: "undirected" });
-    g.setEdge("philipiv",  "margaretii",  { arrowhead: "undirected" });
-    g.setEdge("marianaii", "margaretii",  { arrowhead: "undirected" });
+    g.setEdge("philipiv",  "charles" );
+    g.setEdge("marianaii", "charles" );
+    g.setEdge("philipiii", "philipiv" );
+    g.setEdge("margareti", "philipiv" );
+    g.setEdge("ferdinand", "marianaii" );
+    g.setEdge("marianai",  "marianaii" );
+    g.setEdge("philipiv",  "margaretii" );
+    g.setEdge("marianaii", "margaretii" );
+    g.setEdge("philipiii", "margareti", { arrowhead: "undirected" });
+    g.setEdge("ferdinand", "marianai",  { arrowhead: "undirected" });
+    g.setEdge("philipiv",  "marianaii", { arrowhead: "undirected" });
 
     // Set up an SVG group so that we can translate the final graph.
     var svg = d3.select('svg'),
