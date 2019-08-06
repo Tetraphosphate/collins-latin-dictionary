@@ -74,6 +74,10 @@
         rankdir: 'TB',
         ranker: 'longest-path'
     });
+    
+    g.setEdge({
+        arrowhead: "undirected"
+    });
 
     // Default to assigning a new object as a label for each new edge.
     g.setDefaultEdgeLabel(function() { return {}; });
@@ -85,8 +89,9 @@
 
 
     // Add edges
-    g.setEdge("philip", "charles",   { arrowhead: "undirected" });
-    g.setEdge("marianna", "charles", { arrowhead: undirected });
+    g.setEdge("philip",   "charles"  );
+    g.setEdge("marianna", "charles"  );
+    g.setEdge("philip",   "marianna" );
 
     // Set up an SVG group so that we can translate the final graph.
     var svg = d3.select('svg'),
