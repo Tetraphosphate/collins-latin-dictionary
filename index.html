@@ -39,5 +39,76 @@
     
 <script>
     var dagre = dagreD3.dagre;
-    </script>
+    var g = new dagreD3.graphlib.Graph();
+    
+    // Set an object for the graph label
+g.setGraph({
+  ranksep: 50,
+  nodesep: 50,
+  rankdir: 'TB',
+  ranker: 'longest-path'
+});
+
+// Default to assigning a new object as a label for each new edge.
+g.setDefaultEdgeLabel(function() { return {}; });
+
+var mathNode = function(tex) {
+  return '<span style="width: 5em;display:inline-block">\\[' + tex + '\\]</span>';
+}
+
+g.setNode("start", { labelType: 'html', label: mathNode('\\mathfrak{c}'), width: 120, height: 10, class: 'root' });
+g.setNode("cofn", { labelType: 'html', label:  mathNode('\\mathsf{cof} (\\mathcal{N})'), width: 120, height: 50 });
+g.setNode("cofm", { labelType: 'html', label:  mathNode('\\mathsf{cof} (\\mathcal{M})'), width: 120, height: 50 });
+g.setNode("covn", { labelType: 'html', label:  mathNode('\\mathsf{cov} (\\mathcal{N})'), width: 120, height: 50 });
+g.setNode("covm", { labelType: 'html', label:  mathNode('\\mathsf{cov} (\\mathcal{M})'), width: 120, height: 50 });
+g.setNode("nonn", { labelType: 'html', label:  mathNode('\\mathsf{non} (\\mathcal{N})'), width: 120, height: 50 });
+g.setNode("nonm", { labelType: 'html', label:  mathNode('\\mathsf{non} (\\mathcal{M})'), width: 120, height: 50 });
+g.setNode("addn", { labelType: 'html', label:  mathNode('\\mathsf{add} (\\mathcal{N})'), width: 120, height: 50 });
+g.setNode("addm", { labelType: 'html', label:  mathNode('\\mathsf{add} (\\mathcal{M})'), width: 120, height: 50 });
+g.setNode("b", { labelType: 'html', label:  mathNode('\\mathfrak{b}'), width: 120, height: 50 });
+g.setNode("d", { labelType: 'html', label:  mathNode('\\mathfrak{d}'), width: 120, height: 50 });
+g.setNode("aleph1", { labelType: 'html', label:  mathNode('\\\aleph_1'), width: 120, height: 50 });
+
+
+
+// Add edges
+g.setEdge("start", "cofn");
+g.setEdge("cofn", "cofm");
+g.setEdge("cofn", "nonn");
+g.setEdge("cofm", "nonm");
+g.setEdge("nonm", "covn");
+g.setEdge("cofm", "d");
+g.setEdge("nonm", "b");
+g.setEdge("d", "b");
+g.setEdge("nonm", "covn");
+g.setEdge("covn","addn");
+g.setEdge("addn", "aleph1");
+g.setEdge("addm", "addn");
+g.setEdge("covm", "addm");
+g.setEdge("b", "addm");
+g.setEdge("d", "covm");
+g.setEdge("nonn", "covm");
+
+// Render
+
+// Set up an SVG group so that we can translate the final graph.
+var svg = d3.select('svg'),
+    svgGroup = svg.append('g');
+
+// Run the renderer. This is what draws the final graph.
+var render = dagreD3.render();
+render(d3.select('.d3 g'), g);
+
+// Size the container to the graph
+var PADDING = 120;
+svg.attr('width', g.graph().width + PADDING);
+svg.attr('height', g.graph().height + PADDING);
+
+// Center the graph
+var offset = PADDING / 2;
+svgGroup.attr(
+  'transform', 'translate(' + offset + ', ' + offset + ')'
+);
+
+</script>
 </html>
