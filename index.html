@@ -58,7 +58,7 @@
 
 
     // Add edges
-    g.setEdge("philip", "charles");
+    g.setEdge("philip", "charles", { arrowheadClass: "hidden" });
     g.setEdge("marianna", "charles");
 
     // Set up an SVG group so that we can translate the final graph.
@@ -98,6 +98,9 @@
         display: block;
         margin: 0 auto;
     }
+    .hidden {
+        stroke: transparent;
+        fill: transparent;
     text {
         font-family: "Helvetica Neue", Helvetica, Arial, sans-serf;
     }
