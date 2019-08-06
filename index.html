@@ -89,12 +89,14 @@
     g.setNode("philipiv",  { label: "Philip IV of Spain",    class: "male ruler" });
     g.setNode("marianna",  { label: "Maria Anna of Austria", class: "female" });
     g.setNode("philipiii", { label: "Philip III of Spain",   class: "male ruler" });
+    g.setNode("margaret",  { label: "Margaret of Austria",   class: "female" });
 
 
     // Add edges
     g.setEdge("philipiv",   "charles", { arrowhead: "undirected" });
     g.setEdge("marianna", "charles", { arrowhead: "undirected" });
     g.setEdge("philipiii", "philipiv", { arrowhead: "undirected" });
+    g.setEdge("margaret", "philipiv", { arrowhead: "undirected" });
 
     // Set up an SVG group so that we can translate the final graph.
     var svg = d3.select('svg'),
