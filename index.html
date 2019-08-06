@@ -17,7 +17,7 @@
     <div class="page">
     
         <h1>Title</h1>
-            <svg width=960 height=600 class="d3"><g /></svg>
+            <svg class="d3"></svg>
             <p>draft royal family tree?!???</p>
         
         <!-- REMEMBER TO UPDATE DATE -->
@@ -111,4 +111,21 @@ svgGroup.attr(
 );
 
 </script>
+    
+<style>
+        .d3 {
+  border: 1px solid;
+}
+.d3 rect {
+  stroke: #ccc;
+  fill: #fff;
+}
+.d3 .edgePath path {
+  stroke: #aaa;
+}
+.d3 div {
+  display: block;
+  margin: 0 auto;
+}
+</style>
 </html>
