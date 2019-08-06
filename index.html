@@ -99,6 +99,11 @@
     });
     svg.call(zoom);
     
+    // Size the container to the graph
+    var PADDING = 120;
+    svg.attr('width', g.graph().width + PADDING);
+    svg.attr('height', g.graph().height + PADDING);
+    
     // Create the renderer
     var render = new dagreD3.render();
 
