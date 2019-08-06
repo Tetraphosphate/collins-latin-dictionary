@@ -49,10 +49,6 @@
         display: block;
         margin: 0 auto;
     }
-    .hidden {
-        fill: transparent;
-        stroke-opacity: 0;
-    }
     
     g.male > rect {
     }
@@ -89,8 +85,8 @@
 
 
     // Add edges
-    g.setEdge("philip", "charles",   { arrowheadClass: "hidden" });
-    g.setEdge("marianna", "charles", { arrowheadClass: "hidden" });
+    g.setEdge("philip", "charles",   { arrowhead: "undirected" });
+    g.setEdge("marianna", "charles", { arrowhead: undirected });
 
     // Set up an SVG group so that we can translate the final graph.
     var svg = d3.select('svg'),
