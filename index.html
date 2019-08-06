@@ -62,25 +62,26 @@
     g.setEdge("philip", "charles");
     g.setEdge("marianna", "charles");
 
-    // Render
-    var render = new dagreD3.render();
-
     // Set up an SVG group so that we can translate the final graph.
     var svg = d3.select('svg'),
         svgGroup = svg.append('g');
+    
+    // Set up zoom support
+    var zoom = d3.zoom().on("zoom", function() {
+        inner.attr("transform", d3.event.transform);
+    });
+    svg.call(zoom);
+    
+    // Create the renderer
+    var render = new dagreD3.render();
 
     // Run the renderer. This is what draws the final graph.
     render(d3.select('.d3 g'), g);
 
-    // Size the container to the graph
-    var PADDING = 120;
-    svg.attr('width', g.graph().width + PADDING);
-    svg.attr('height', g.graph().height + PADDING);
+    var initialScale = 0.75;
+    svg.call(zoom.transform, d3.zoomIdentity.translate((svg.attr("width") - g.graph().width * initialScale) / 2, 20).scale(initialScale));
 
-    // Center the graph
-    var xCenterOffset = (svg.attr("width") - g.graph().width) / 2;
-svgGroup.attr("transform", "translate(" + xCenterOffset + ", 20)");
-svg.attr("height", g.graph().height + 40);
+    svg.attr('height', g.graph().height * initialScale + 40);
 
 </script>
     
