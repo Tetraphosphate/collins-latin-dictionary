@@ -85,18 +85,22 @@
     g.setDefaultEdgeLabel(function() { return {}; });
 
     // Add nodes
-    g.setNode("charles",   { label: "Charles II of Spain",   class: "male ruler" });
-    g.setNode("philipiv",  { label: "Philip IV of Spain",    class: "male ruler" });
-    g.setNode("marianna",  { label: "Maria Anna of Austria", class: "female" });
-    g.setNode("philipiii", { label: "Philip III of Spain",   class: "male ruler" });
-    g.setNode("margaret",  { label: "Margaret of Austria",   class: "female" });
+    g.setNode("charles",   { label: "Charles II of Spain",               class: "male ruler" });
+    g.setNode("philipiv",  { label: "Philip IV of Spain",                class: "male ruler" });
+    g.setNode("marianaii", { label: "Maria Anna of Austria",             class: "female" });
+    g.setNode("philipiii", { label: "Philip III of Spain",               class: "male ruler" });
+    g.setNode("margaret",  { label: "Margaret of Austria",               class: "female" });
+    g.setNode("ferdinand", { label: "Ferdinand III, Holy Roman Emperor", class: "male ruler" });
+    g.setNode("marianai",  { label: "Maria Anna of Spain",               class: "female" });
 
 
     // Add edges
-    g.setEdge("philipiv",   "charles", { arrowhead: "undirected" });
-    g.setEdge("marianna", "charles", { arrowhead: "undirected" });
-    g.setEdge("philipiii", "philipiv", { arrowhead: "undirected" });
-    g.setEdge("margaret", "philipiv", { arrowhead: "undirected" });
+    g.setEdge("philipiv",  "charles",   { arrowhead: "undirected" });
+    g.setEdge("marianaii", "charles",   { arrowhead: "undirected" });
+    g.setEdge("philipiii", "philipiv",  { arrowhead: "undirected" });
+    g.setEdge("margaret",  "philipiv",  { arrowhead: "undirected" });
+    g.setEdge("ferdinand", "marianaii", { arrowhead: "undirected" });
+    g.setEdge("marianai",  "marianaii", { arrowhead: "undirected" });
 
     // Set up an SVG group so that we can translate the final graph.
     var svg = d3.select('svg'),
