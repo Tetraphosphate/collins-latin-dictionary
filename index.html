@@ -16,7 +16,9 @@
     <div class="page">
     
         <h1>Royal Family Tree</h1>
-            <svg class="d3"><g/></svg>
+        <div id="frame">
+            <svg class="d3" width="500" height = "500"><g/></svg>
+        </div>
             <p>Draft royal family tree?!??</p>
         
         <!-- REMEMBER TO UPDATE DATE -->
@@ -97,11 +99,6 @@
         inner.attr("transform", d3.event.transform);
     });
     svg.call(zoom);
-    
-    // Size the container to the graph
-    var PADDING = 120;
-    svg.attr('width', g.graph().width + PADDING);
-    svg.attr('height', g.graph().height + PADDING);
     
     // Create the renderer
     var render = new dagreD3.render();
