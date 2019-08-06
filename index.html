@@ -64,6 +64,7 @@
 
     // Set up an SVG group so that we can translate the final graph.
     var svg = d3.select('svg'),
+        inner = svg.select('g');
         svgGroup = svg.append('g');
     
     // Set up zoom support
