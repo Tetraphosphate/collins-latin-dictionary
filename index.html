@@ -36,6 +36,39 @@
 
 </body>
     
+<style>
+    .node rect {
+        stroke: #000;
+        fill: #fff;
+        stroke-width: 1;
+    }
+    .edgePath path {
+        stroke: #000;
+    }
+    .d3 div {
+        display: block;
+        margin: 0 auto;
+    }
+    .hidden {
+        stroke-width: 0;
+        fill: transparent;
+    }
+    text {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+    g.male > rect {
+    }
+    
+    g.female > rect {
+        stroke-dasharray: 4 4;
+    }
+    
+    g.ruler > rect {
+        stroke-width: 2;
+    }
+    
+</style>
+    
 <script>
     var dagre = dagreD3.dagre;
     var g = new dagreD3.graphlib.Graph();
@@ -84,37 +117,4 @@
     svg.attr('height', g.graph().height * initialScale + 40);
 
 </script>
-    
-<style>
-    .node rect {
-        stroke: #000;
-        fill: #fff;
-        stroke-width: 1;
-    }
-    .edgePath path {
-        stroke: #000;
-    }
-    .d3 div {
-        display: block;
-        margin: 0 auto;
-    }
-    .hidden {
-        stroke-width: 0;
-        fill: transparent;
-    }
-    text {
-        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    }
-    g.male > rect {
-    }
-    
-    g.female > rect {
-        stroke-dasharray: 4 4;
-    }
-    
-    g.ruler > rect {
-        stroke-width: 2;
-    }
-    
-</style>
 </html>
