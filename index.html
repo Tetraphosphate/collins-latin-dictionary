@@ -17,7 +17,7 @@
     <div class="page">
     
         <h1>Title</h1>
-            <svg class="d3"></svg>
+            <svg class="d3"><g/></svg>
             <p>draft royal family tree?!???</p>
         
         <!-- REMEMBER TO UPDATE DATE -->
@@ -42,49 +42,46 @@
     var g = new dagreD3.graphlib.Graph();
     
     // Set an object for the graph label
-g.setGraph({
-  ranksep: 50,
-  nodesep: 50,
-  rankdir: 'TB',
-  ranker: 'longest-path'
-});
+    g.setGraph({
+        ranksep: 50,
+        nodesep: 50,
+        rankdir: 'TB',
+        ranker: 'longest-path'
+    });
 
-// Default to assigning a new object as a label for each new edge.
-g.setDefaultEdgeLabel(function() { return {}; });
+    // Default to assigning a new object as a label for each new edge.
+    g.setDefaultEdgeLabel(function() { return {}; });
 
-var mathNode = function(tex) {
-  return '<span style="width: 5em;display:inline-block">\\[' + tex + '\\]</span>';
-}
-
-g.setNode("charles",  { label: "Charles II of Spain",   width: 120, height: 10 });
-g.setNode("philip",   { label: "Philip IV of Spain",    width: 120, height: 10 });
-g.setNode("marianna", { label: "Maria Anna of Austria", width: 120, height: 10 });
+    // Add nodes
+    g.setNode("charles",  { label: "Charles II of Spain",   class: "male ruler" });
+    g.setNode("philip",   { label: "Philip IV of Spain",    class: "male ruler" });
+    g.setNode("marianna", { label: "Maria Anna of Austria", class: "female" });
 
 
-// Add edges
-g.setEdge("philip", "charles");
-g.setEdge("marianna", "charles");
+    // Add edges
+    g.setEdge("philip", "charles");
+    g.setEdge("marianna", "charles");
 
-// Render
+    // Render
+    var render = new dagreD3.render();
 
-// Set up an SVG group so that we can translate the final graph.
-var svg = d3.select('svg'),
-    svgGroup = svg.append('g');
+    // Set up an SVG group so that we can translate the final graph.
+    var svg = d3.select('svg'),
+        svgGroup = svg.append('g');
 
-// Run the renderer. This is what draws the final graph.
-var render = dagreD3.render();
-render(d3.select('.d3 g'), g);
+    // Run the renderer. This is what draws the final graph.
+    render(d3.select('.d3 g'), g);
 
-// Size the container to the graph
-var PADDING = 120;
-svg.attr('width', g.graph().width + PADDING);
-svg.attr('height', g.graph().height + PADDING);
+    // Size the container to the graph
+    var PADDING = 120;
+    svg.attr('width', g.graph().width + PADDING);
+    svg.attr('height', g.graph().height + PADDING);
 
-// Center the graph
-var offset = PADDING / 2;
-svgGroup.attr(
-  'transform', 'translate(' + offset + ', ' + offset + ')'
-);
+    // Center the graph
+    var offset = PADDING / 2;
+    svgGroup.attr(
+        'transform', 'translate(' + offset + ', ' + offset + ')'
+    );
 
 </script>
     
@@ -103,5 +100,17 @@ svgGroup.attr(
   display: block;
   margin: 0 auto;
 }
+    
+    g.male > rect {
+    }
+    
+    g.female > rect {
+        stroke-dasharray: 4 4;
+    }
+    
+    g.ruler > rect {
+        stroke-width: 2;
+    }
+    
 </style>
 </html>
