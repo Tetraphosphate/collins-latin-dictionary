@@ -80,7 +80,7 @@
     g.setDefaultEdgeLabel(function() { return {}; });
 
     // Add nodes
-    g.setNode("charles",    { label: "Charles II of Spain",               class: "male ruler" });
+    g.setNode("charles",    { label: "Charles II of Spain",               class: "male ruler", id: "charles" });
     g.setNode("philipiv",   { label: "Philip IV of Spain",                class: "male ruler" });
     g.setNode("marianaii",  { label: "Maria Anna of Austria",             class: "female" });
     g.setNode("philipiii",  { label: "Philip III of Spain",               class: "male ruler" });
@@ -99,9 +99,6 @@
     g.setEdge("marianai",  "marianaii" );
     g.setEdge("philipiv",  "margaretii" );
     g.setEdge("marianaii", "margaretii" );
-    /*g.setEdge("philipiii", "margareti", { arrowhead: "undirected" });
-    g.setEdge("ferdinand", "marianai",  { arrowhead: "undirected" });
-    g.setEdge("philipiv",  "marianaii", { arrowhead: "undirected" });*/
     
     // g.nodeEdges("charles");  <======== //
 
