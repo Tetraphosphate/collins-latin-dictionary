@@ -100,7 +100,7 @@
     g.setEdge("philipiv",  "margaretii" );
     g.setEdge("marianaii", "margaretii" );
     
-    g.inEdges("charles").style("stroke", "red");
+    d3.selectAll("g.edgePath.to-charles").style("stroke", "red");
     // ========> g.nodeEdges("charles");  <======== //
 
     // Set up an SVG group so that we can translate the final graph.
