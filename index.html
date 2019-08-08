@@ -86,13 +86,13 @@
     g.setNode("philipiii",        { label: "Philip III of Spain",               class: "male ruler" });
     g.setNode("margaret",         { label: "Margaret of Austria",               class: "female" });
     g.setNode("ferdinand",        { label: "Ferdinand III, Holy Roman Emperor", class: "male ruler" });
-    g.setNode("marianai",         { label: "Maria Anna of Spain",               class: "female" });
+    g.setNode("marianai",         { label: "Maria Anna of Spain",               class: "female ruler" });
     g.setNode("philipii",         { label: "Philip II of Spain",                class: "male ruler" });
     g.setNode("annaaustria",      { label: "Anna of Austria",                   class: "female" });
     g.setNode("charlesii",        { label: "Charles II of Austria",             class: "male" });
     g.setNode("mariaanna",        { label: "Maria Anna of Bavaria",             class: "female" });
     g.setNode("ferdinandii",      { label: "Ferdinand II, Holy Roman Emperor",  class: "male ruler" });
-    g.setNode("mariaannabavaria", { label: "Maria Anna of Bavaria",             class: "female" }); 
+    g.setNode("mariaannabavaria", { label: "Maria Anna of Bavaria",             class: "female" });
 
 
     // Add edges
@@ -108,6 +108,8 @@
     g.setEdge("mariaanna",        "margaret" );
     g.setEdge("ferdinandii",      "ferdinand" );
     g.setEdge("mariaannabavaria", "ferdinand" );
+    g.setEdge("philipiii",        "marianai" );
+    g.setEdge("margaret",         "marianai" );
 
     // ========> g.nodeEdges("charles");  <======== //
 
