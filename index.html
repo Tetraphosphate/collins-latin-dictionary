@@ -80,30 +80,34 @@
     g.setDefaultEdgeLabel(function() { return {}; });
 
     // Add nodes
-    g.setNode("charles",     { label: "Charles II of Spain",               class: "male ruler" });
-    g.setNode("philipiv",    { label: "Philip IV of Spain",                class: "male ruler" });
-    g.setNode("marianaii",   { label: "Maria Anna of Austria",             class: "female" });
-    g.setNode("philipiii",   { label: "Philip III of Spain",               class: "male ruler" });
-    g.setNode("margaret",    { label: "Margaret of Austria",               class: "female" });
-    g.setNode("ferdinand",   { label: "Ferdinand III, Holy Roman Emperor", class: "male ruler" });
-    g.setNode("marianai",    { label: "Maria Anna of Spain",               class: "female" });
-    g.setNode("philipii",    { label: "Philip II of Spain",                class: "male ruler" });
-    g.setNode("annaaustria", { label: "Anna of Austria",                   class: "female" });
-    g.setNode("charlesii",   { label: "Charles II of Austria",             class: "male" });
-    g.setNode("mariaanna",   { label: "Maria Anna of Bavaria",             class: "female"});
+    g.setNode("charles",          { label: "Charles II of Spain",               class: "male ruler" });
+    g.setNode("philipiv",         { label: "Philip IV of Spain",                class: "male ruler" });
+    g.setNode("marianaii",        { label: "Maria Anna of Austria",             class: "female" });
+    g.setNode("philipiii",        { label: "Philip III of Spain",               class: "male ruler" });
+    g.setNode("margaret",         { label: "Margaret of Austria",               class: "female" });
+    g.setNode("ferdinand",        { label: "Ferdinand III, Holy Roman Emperor", class: "male ruler" });
+    g.setNode("marianai",         { label: "Maria Anna of Spain",               class: "female" });
+    g.setNode("philipii",         { label: "Philip II of Spain",                class: "male ruler" });
+    g.setNode("annaaustria",      { label: "Anna of Austria",                   class: "female" });
+    g.setNode("charlesii",        { label: "Charles II of Austria",             class: "male" });
+    g.setNode("mariaanna",        { label: "Maria Anna of Bavaria",             class: "female" });
+    g.setNode("ferdinandii",      { label: "Ferdinand II, Holy Roman Emperor",  class: "male ruler" });
+    g.setNode("mariaannabavaria", { label: "Maria Anna of Bavaria",             class: "female" }); 
 
 
     // Add edges
-    g.setEdge("philipiv",    "charles" );
-    g.setEdge("marianaii",   "charles" );
-    g.setEdge("philipiii",   "philipiv" );
-    g.setEdge("margaret",    "philipiv" );
-    g.setEdge("ferdinand",   "marianaii" );
-    g.setEdge("marianai",    "marianaii" );
-    g.setEdge("philipii",    "philipiii" );
-    g.setEdge("annaaustria", "philipiii" );
-    g.setEdge("charlesii",   "margaret" );
-    g.setEdge("mariaanna",   "margaret" );
+    g.setEdge("philipiv",         "charles" );
+    g.setEdge("marianaii",        "charles" );
+    g.setEdge("philipiii",        "philipiv" );
+    g.setEdge("margaret",         "philipiv" );
+    g.setEdge("ferdinand",        "marianaii" );
+    g.setEdge("marianai",         "marianaii" );
+    g.setEdge("philipii",         "philipiii" );
+    g.setEdge("annaaustria",      "philipiii" );
+    g.setEdge("charlesii",        "margaret" );
+    g.setEdge("mariaanna",        "margaret" );
+    g.setEdge("ferdinandii",      "ferdinand" );
+    g.setEdge("mariaannabavaria", "ferdinand" );
 
     // ========> g.nodeEdges("charles");  <======== //
 
