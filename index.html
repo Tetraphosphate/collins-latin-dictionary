@@ -75,10 +75,11 @@
         rankdir: 'TB',
         ranker: 'longest-path'
     });
-
+    
     // Default to assigning a new object as a label for each new edge.
     g.setDefaultEdgeLabel(function() { return {}; });
-
+    
+    
     // Add nodes
     g.setNode("charles",          { label: "Charles II of Spain",               class: "male ruler" });
     g.setNode("philipiv",         { label: "Philip IV of Spain",                class: "male ruler" });
@@ -109,52 +110,53 @@
     g.setNode("joannacastile",    { label: "Joanna of Castile",                 class: "female ruler" });
     g.setNode("manueli",          { label: "Manuel I of Portugal",              class: "male ruler" });
     g.setNode("mariaaragon",      { label: "Maria of Aragon",                   class: "female" });
-
-
+    
+    
     // Add edges
-    g.setEdge("philipiv",         "charles" );
-    g.setEdge("marianaii",        "charles" );
-    g.setEdge("philipiii",        "philipiv" );
-    g.setEdge("margaret",         "philipiv" );
-    g.setEdge("ferdinand",        "marianaii" );
-    g.setEdge("marianai",         "marianaii" );
-    g.setEdge("philipii",         "philipiii" );
-    g.setEdge("annaaustria",      "philipiii" );
-    g.setEdge("charlesii",        "margaret" );
-    g.setEdge("mariaanna",        "margaret" );
-    g.setEdge("ferdinandii",      "ferdinand" );
-    g.setEdge("mariaannabavaria", "ferdinand" );
-    g.setEdge("philipiii",        "marianai" );
-    g.setEdge("margaret",         "marianai" );
-    g.setEdge("charlesii",        "ferdinandii" );
-    g.setEdge("mariaanna",        "ferdinandii" );
-    g.setEdge("williamv",         "mariaannabavaria" );
-    g.setEdge("renata",           "mariaannabavaria" );
-    g.setEdge("charlesv",         "philipii" );
-    g.setEdge("isabellaportugal", "philipii" );
-    g.setEdge("maximilianii",     "annaaustria" );
-    g.setEdge("mariaaustria",     "annaaustria" );
-    g.setEdge("ferdinandi",       "charlesii" );
-    g.setEdge("anne",             "charlesii" );
-    g.setEdge("albertv",          "mariaanna" );
-    g.setEdge("anna",             "mariaanna" );
-    g.setEdge("albertv",          "williamv" );
-    g.setEdge("anna",             "williamv" );
-    g.setEdge("francisi",         "renata" );
-    g.setEdge("christinadenmark", "renata" );
-    g.setEdge("philipcastile",    "charlesv" );
-    g.setEdge("joannacastile",    "charlesv" );
-    g.setEdge("manueli",          "isabellaportugal" );
-    g.setEdge("mariaaragon",      "isabellaportugal" );
-    g.setEdge("ferdinandi",       "maximilianii" );
-    g.setEdge("anne",             "maximilianii" );
-    g.setEdge("charlesv",         "mariaaustria" );
-    g.setEdge("isabellaportugal", "mariaaustria" );
-    g.setEdge("philipcastile",    "ferdinandi" );
-    g.setEdge("joannacastile",    "ferdinandi" );
-
+    g.setEdge("philipiv",         "charles",          { curve: d3.curveBasis });
+    g.setEdge("marianaii",        "charles",          { curve: d3.curveBasis });
+    g.setEdge("philipiii",        "philipiv",         { curve: d3.curveBasis });
+    g.setEdge("margaret",         "philipiv",         { curve: d3.curveBasis });
+    g.setEdge("ferdinand",        "marianaii",        { curve: d3.curveBasis });
+    g.setEdge("marianai",         "marianaii",        { curve: d3.curveBasis });
+    g.setEdge("philipii",         "philipiii",        { curve: d3.curveBasis });
+    g.setEdge("annaaustria",      "philipiii",        { curve: d3.curveBasis });
+    g.setEdge("charlesii",        "margaret",         { curve: d3.curveBasis });
+    g.setEdge("mariaanna",        "margaret",         { curve: d3.curveBasis });
+    g.setEdge("ferdinandii",      "ferdinand",        { curve: d3.curveBasis });
+    g.setEdge("mariaannabavaria", "ferdinand",        { curve: d3.curveBasis });
+    g.setEdge("philipiii",        "marianai",         { curve: d3.curveBasis });
+    g.setEdge("margaret",         "marianai",         { curve: d3.curveBasis });
+    g.setEdge("charlesii",        "ferdinandii",      { curve: d3.curveBasis });
+    g.setEdge("mariaanna",        "ferdinandii",      { curve: d3.curveBasis });
+    g.setEdge("williamv",         "mariaannabavaria", { curve: d3.curveBasis });
+    g.setEdge("renata",           "mariaannabavaria", { curve: d3.curveBasis });
+    g.setEdge("charlesv",         "philipii",         { curve: d3.curveBasis });
+    g.setEdge("isabellaportugal", "philipii",         { curve: d3.curveBasis });
+    g.setEdge("maximilianii",     "annaaustria",      { curve: d3.curveBasis });
+    g.setEdge("mariaaustria",     "annaaustria",      { curve: d3.curveBasis });
+    g.setEdge("ferdinandi",       "charlesii",        { curve: d3.curveBasis });
+    g.setEdge("anne",             "charlesii",        { curve: d3.curveBasis });
+    g.setEdge("albertv",          "mariaanna",        { curve: d3.curveBasis });
+    g.setEdge("anna",             "mariaanna",        { curve: d3.curveBasis });
+    g.setEdge("albertv",          "williamv",         { curve: d3.curveBasis });
+    g.setEdge("anna",             "williamv",         { curve: d3.curveBasis });
+    g.setEdge("francisi",         "renata",           { curve: d3.curveBasis });
+    g.setEdge("christinadenmark", "renata",           { curve: d3.curveBasis });
+    g.setEdge("philipcastile",    "charlesv",         { curve: d3.curveBasis });
+    g.setEdge("joannacastile",    "charlesv",         { curve: d3.curveBasis });
+    g.setEdge("manueli",          "isabellaportugal", { curve: d3.curveBasis });
+    g.setEdge("mariaaragon",      "isabellaportugal", { curve: d3.curveBasis });
+    g.setEdge("ferdinandi",       "maximilianii",     { curve: d3.curveBasis });
+    g.setEdge("anne",             "maximilianii",     { curve: d3.curveBasis });
+    g.setEdge("charlesv",         "mariaaustria",     { curve: d3.curveBasis });
+    g.setEdge("isabellaportugal", "mariaaustria",     { curve: d3.curveBasis });
+    g.setEdge("philipcastile",    "ferdinandi",       { curve: d3.curveBasis });
+    g.setEdge("joannacastile",    "ferdinandi",       { curve: d3.curveBasis });
+    
+    
+    
     // ========> g.nodeEdges("charles");  <======== //
-
     // Set up an SVG group so that we can translate the final graph.
     var svg = d3.select('svg'),
         inner = svg.select('g');
@@ -168,14 +170,10 @@
     
     // Create the renderer
     var render = new dagreD3.render();
-
     // Run the renderer. This is what draws the final graph.
     render(d3.select('.d3 g'), g);
-
     var initialScale = 0.75;
     svg.call(zoom.transform, d3.zoomIdentity.translate((svg.attr("width") - g.graph().width * initialScale) / 2, 20).scale(initialScale));
-
     //svg.attr('height', g.graph().height * initialScale + 40);
-
 </script>
 </html>
