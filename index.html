@@ -100,7 +100,7 @@
     g.setNode("maximilianii",     { label: "Maximilian II, Holy Roman Emperor", class: "male ruler" });
     g.setNode("mariaaustria",     { label: "Maria of Austria",                  class: "female ruler" });
     g.setNode("ferdinandi",       { label: "Ferdinand I, Holy Roman Emperor",   class: "male ruler" });
-    g.setNode("anne",             { label: "Anne of Bohemia and Hungary",       class: "female" });
+    g.setNode("anne",             { label: "Anna of Bohemia and Hungary",       class: "female" });
     g.setNode("albertv",          { label: "Albert V of Bavaria",               class: "male" });
     g.setNode("anna",             { label: "Anna of Austria",                   class: "female" });
     g.setNode("francisi",         { label: "Francis I of Lorraine",             class: "male" });
@@ -145,7 +145,9 @@
     g.setEdge("philipcastile",    "charlesv",         { curve: d3.curveBasis });
     g.setEdge("joannacastile",    "charlesv",         { curve: d3.curveBasis });
     g.setEdge("manueli",          "isabellaportugal", { curve: d3.curveBasis });
-    g.setEdge("mariaaragon",          "isabellaportugal", { curve: d3.curveBasis });
+    g.setEdge("mariaaragon",      "isabellaportugal", { curve: d3.curveBasis });
+    g.setEdge("ferdinandi",       "maximilianii",     { curve: d3.curveBasis });
+    g.setEdge("anne",             "maximilianii",     { curve: d3.curveBasis });
 
     // ========> g.nodeEdges("charles");  <======== //
 
