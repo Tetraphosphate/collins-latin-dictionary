@@ -30,7 +30,7 @@
             <u class="fakelink">Royal Family Tree</u> | 
             <u class="fakelink">Site made by Janice</u> | 
             <u class="fakelink">Created: 06/08/19</u> | 
-            <u class="fakelink">Updated: 06/08/19</u> | 
+            <u class="fakelink">Updated: 08/08/19</u> | 
             <u class="fakelink" onclick="window.history.back()">Go Back</u>
         </p>
     </footer>
@@ -101,6 +101,8 @@
     g.setNode("mariaaustria",     { label: "Maria of Austria",                  class: "female ruler" });
     g.setNode("ferdinandi",       { label: "Ferdinand I, Holy Roman Emperor",   class: "male ruler" });
     g.setNode("anne",             { label: "Anne of Bohemia and Hungary",       class: "female" });
+    g.setNode("albertv",          { label: "Albert V of Bavaria",               class: "male" });
+    g.setNode("anna",             { label: "Anna of Austria",                   class: "female" });
 
 
     // Add edges
@@ -128,6 +130,8 @@
     g.setEdge("mariaaustria",     "annaaustria" );
     g.setEdge("ferdinandi",       "charlesii" );
     g.setEdge("anne",             "charlesii" );
+    g.setEdge("albertv",          "mariaanna" );
+    g.setEdge("anna",             "mariaanna" );
 
     // ========> g.nodeEdges("charles");  <======== //
 
