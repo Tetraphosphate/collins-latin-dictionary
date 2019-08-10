@@ -182,10 +182,10 @@
     for (i = 0; i < data.length; i++) { //sets a whole bunch of edges
         
         if (data[i].mother !== "") { //if mother is not blank, draw line between mother and child
-            g.setEdge("node-" + data[data[i].mother], "node-" + data[i].id, { curve: d3.curveBasis });
+            g.setEdge("node-" + data[(data[i].mother)], "node-" + data[i].id, { curve: d3.curveBasis });
         }
         if (data[i].father !== "") { //if father is not blank, draw line between father and child
-            g.setEdge("node-" + data[data[i].father], "node-" + data[i].id, { curve: d3.curveBasis });
+            g.setEdge("node-" + data[(data[i].father)], "node-" + data[i].id, { curve: d3.curveBasis });
         }
     }
     
