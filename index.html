@@ -12,7 +12,7 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     
-    <script src="https://dagrejs.github.io/project/dagre-d3/latest/dagre-d3.min.js"></script>
+    <script src="https://dagrejs.github.io/project/dagre-d3/latest/dagre-d3.js"></script>
     <script src="https://dagrejs.github.io/project/dagre/latest/dagre.min.js"></script>
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script src="https://underscorejs.org/underscore-min.js"></script>
@@ -183,14 +183,14 @@
     var father;
     
     for (i = 0; i < data.length; i++) { //sets a whole bunch of edges
-
+        console.log(i);
+        mother = data[i].mother;
+        father = data[i].father;
         if (mother !== "") { //if mother is not blank, draw line between mother and child
-            mother = data[i].mother
-            g.setEdge("node-" + data[mother], "node-" + data[i].id, { curve: d3.curveBasis });
+            console.log("mother" + mother);
         }
         if (father !== "") { //if father is not blank, draw line between father and child
-            father = data[i].father
-            g.setEdge("node-" + data[father], "node-" + data[i].id, { curve: d3.curveBasis });
+            console.log("father" + father);
         }
     }
     
