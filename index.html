@@ -220,6 +220,13 @@
     
     
     
+    
+    
+    var EDGE_DEFAULT_ATTRS = {
+  arrowhead: "normal",
+  lineInterpolate: "linear"
+};
+    
     g.edges().forEach(function(e) {
       var edge = g.edge(e);
       if (typeof edge === "undefined") {
