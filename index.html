@@ -66,20 +66,12 @@
 </style>
     
 <script>
-    var json = `
-[{"name": "Woden",        "mother": "",        "father": "" },
-{ "name": "Bældæg",       "mother": "",        "father": "node-1" },
-{ "name": "Brond",        "mother": "",        "father": "node-2" },
-{ "name": "Freawine",     "mother": "",        "father": "node-3" },
-{ "name": "Wig",          "mother": "",        "father": "node-4" },
-{ "name": "Giwis",        "mother": "",        "father": "node-5" },
-{ "name": "Elesa",        "mother": "",        "father": "node-6" },
-{ "name": "Cerdic",       "mother": "",        "father": "node-7" },
-{ "name": "Cynric",       "mother": "",        "father": "node-8" },
-{ "name": "Ceawlin",      "mother": "",        "father": "node-9" },
-{ "name": "Cuthwulf",     "mother": "",        "father": "node-9" }]
-`;
-        
+    var json = `[
+
+
+
+
+]`;
         
         
     var data = JSON.parse(json);
@@ -110,30 +102,6 @@
     g.setNode("margaret",         { label: "Margaret of Austria",               class: "female" });
     g.setNode("ferdinand",        { label: "Ferdinand III, Holy Roman Emperor", class: "male ruler" });
     g.setNode("marianai",         { label: "Maria Anna of Spain",               class: "female ruler" });
-    g.setNode("philipii",         { label: "Philip II of Spain",                class: "male ruler" });
-    g.setNode("annaaustria",      { label: "Anna of Austria",                   class: "female" });
-    g.setNode("charlesii",        { label: "Charles II of Austria",             class: "male" });
-    g.setNode("mariaanna",        { label: "Maria Anna of Bavaria",             class: "female" });
-    g.setNode("ferdinandii",      { label: "Ferdinand II, Holy Roman Emperor",  class: "male ruler" });
-    g.setNode("mariaannabavaria", { label: "Maria Anna of Bavaria",             class: "female" });
-    g.setNode("williamv",         { label: "William V of Bavaria",              class: "male" });
-    g.setNode("renata",           { label: "Renata of Lorraine",                class: "female" });
-    g.setNode("charlesv",         { label: "Charles V, Holy Roman Emperor",     class: "male ruler" });
-    g.setNode("isabellaportugal", { label: "Isabella of Portugal",              class: "female" });
-    g.setNode("maximilianii",     { label: "Maximilian II, Holy Roman Emperor", class: "male ruler" });
-    g.setNode("mariaaustria",     { label: "Maria of Austria",                  class: "female ruler" });
-    g.setNode("ferdinandi",       { label: "Ferdinand I, Holy Roman Emperor",   class: "male ruler" });
-    g.setNode("anne",             { label: "Anna of Bohemia and Hungary",       class: "female" });
-    g.setNode("albertv",          { label: "Albert V of Bavaria",               class: "male" });
-    g.setNode("anna",             { label: "Anna of Austria",                   class: "female" });
-    g.setNode("francisi",         { label: "Francis I of Lorraine",             class: "male" });
-    g.setNode("christinadenmark", { label: "Christina of Denmark",              class: "female ruler" });
-    g.setNode("philipcastile",    { label: "Philip I of Castile",               class: "male ruler" });
-    g.setNode("joannacastile",    { label: "Joanna of Castile",                 class: "female ruler" });
-    g.setNode("manueli",          { label: "Manuel I of Portugal",              class: "male ruler" });
-    g.setNode("mariaaragon",      { label: "Maria of Aragon",                   class: "female" });
-    g.setNode("vladislausii",     { label: "Vladislaus II of Hungary",          class: "male ruler" });
-    g.setNode("annafoixcandale",  { label: "Anna of Foix-Candale",              class: "female ruler" });
     
     
     // Add edges
@@ -143,43 +111,6 @@
     g.setEdge("margaret",         "philipiv",         { curve: d3.curveBasis });
     g.setEdge("ferdinand",        "marianaii",        { curve: d3.curveBasis });
     g.setEdge("marianai",         "marianaii",        { curve: d3.curveBasis });
-    g.setEdge("philipii",         "philipiii",        { curve: d3.curveBasis });
-    g.setEdge("annaaustria",      "philipiii",        { curve: d3.curveBasis });
-    g.setEdge("charlesii",        "margaret",         { curve: d3.curveBasis });
-    g.setEdge("mariaanna",        "margaret",         { curve: d3.curveBasis });
-    g.setEdge("ferdinandii",      "ferdinand",        { curve: d3.curveBasis });
-    g.setEdge("mariaannabavaria", "ferdinand",        { curve: d3.curveBasis });
-    g.setEdge("philipiii",        "marianai",         { curve: d3.curveBasis });
-    g.setEdge("margaret",         "marianai",         { curve: d3.curveBasis });
-    g.setEdge("charlesii",        "ferdinandii",      { curve: d3.curveBasis });
-    g.setEdge("mariaanna",        "ferdinandii",      { curve: d3.curveBasis });
-    g.setEdge("williamv",         "mariaannabavaria", { curve: d3.curveBasis });
-    g.setEdge("renata",           "mariaannabavaria", { curve: d3.curveBasis });
-    g.setEdge("charlesv",         "philipii",         { curve: d3.curveBasis });
-    g.setEdge("isabellaportugal", "philipii",         { curve: d3.curveBasis });
-    g.setEdge("maximilianii",     "annaaustria",      { curve: d3.curveBasis });
-    g.setEdge("mariaaustria",     "annaaustria",      { curve: d3.curveBasis });
-    g.setEdge("ferdinandi",       "charlesii",        { curve: d3.curveBasis });
-    g.setEdge("anne",             "charlesii",        { curve: d3.curveBasis });
-    g.setEdge("albertv",          "mariaanna",        { curve: d3.curveBasis });
-    g.setEdge("anna",             "mariaanna",        { curve: d3.curveBasis });
-    g.setEdge("albertv",          "williamv",         { curve: d3.curveBasis });
-    g.setEdge("anna",             "williamv",         { curve: d3.curveBasis });
-    g.setEdge("francisi",         "renata",           { curve: d3.curveBasis });
-    g.setEdge("christinadenmark", "renata",           { curve: d3.curveBasis });
-    g.setEdge("philipcastile",    "charlesv",         { curve: d3.curveBasis });
-    g.setEdge("joannacastile",    "charlesv",         { curve: d3.curveBasis });
-    g.setEdge("manueli",          "isabellaportugal", { curve: d3.curveBasis });
-    g.setEdge("mariaaragon",      "isabellaportugal", { curve: d3.curveBasis });
-    g.setEdge("ferdinandi",       "maximilianii",     { curve: d3.curveBasis });
-    g.setEdge("anne",             "maximilianii",     { curve: d3.curveBasis });
-    g.setEdge("charlesv",         "mariaaustria",     { curve: d3.curveBasis });
-    g.setEdge("isabellaportugal", "mariaaustria",     { curve: d3.curveBasis });
-    g.setEdge("philipcastile",    "ferdinandi",       { curve: d3.curveBasis });
-    g.setEdge("joannacastile",    "ferdinandi",       { curve: d3.curveBasis });
-    g.setEdge("vladislausii",     "anne",             { curve: d3.curveBasis });
-    g.setEdge("annafoixcandale",  "anne",             { curve: d3.curveBasis });
-    
     
     
     // ========> g.nodeEdges("charles");  <======== //
