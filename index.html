@@ -43,12 +43,111 @@
 </body>
     
 <script>
-    var json = `[
+    var json = `
 
+[
+  {
+    "id": 0,
+    "name": "Woden",
+    "mother": "",
+    "father": "",
+    "class": "legendary saxon male ruler",
+    "birthday": "",
+    "deathday": ""
+  },
+  {
+    "id": 1,
+    "name": "Bældæg",
+    "mother": "",
+    "father": 0,
+    "class": "legendary saxon male ruler",
+    "birthday": "",
+    "deathday": ""
+  },
+  {
+    "id": 2,
+    "name": "Brond",
+    "mother": "",
+    "father": 1,
+    "class": "legendary saxon male ruler",
+    "birthday": "",
+    "deathday": ""
+  },
+  {
+    "id": 3,
+    "name": "Freawine",
+    "mother": "",
+    "father": 2,
+    "class": "legendary saxon male ruler",
+    "birthday": "",
+    "deathday": ""
+  },
+  {
+    "id": 4,
+    "name": "Wig",
+    "mother": "",
+    "father": 3,
+    "class": "legendary saxon male ruler",
+    "birthday": "",
+    "deathday": ""
+  },
+  {
+    "id": 5,
+    "name": "Giwis",
+    "mother": "",
+    "father": 4,
+    "class": "legendary saxon male ruler",
+    "birthday": "",
+    "deathday": ""
+  },
+  {
+    "id": 6,
+    "name": "Elesa",
+    "mother": "",
+    "father": 5,
+    "class": "legendary saxon male ruler",
+    "birthday": "",
+    "deathday": ""
+  },
+  {
+    "id": 7,
+    "name": "Cerdic",
+    "mother": "",
+    "father": 6,
+    "class": "legendary saxon male ruler",
+    "birthday": "",
+    "deathday": 534
+  },
+  {
+    "id": 8,
+    "name": "Cynric",
+    "mother": "",
+    "father": 7,
+    "class": "wessex anglo-saxon male ruler",
+    "birthday": "",
+    "deathday": 560
+  },
+  {
+    "id": 9,
+    "name": "Ceawlin",
+    "mother": "",
+    "father": 8,
+    "class": "wessex anglo-saxon male ruler",
+    "birthday": "",
+    "deathday": 593
+  },
+  {
+    "id": 10,
+    "name": "Cuthwulf",
+    "mother": "",
+    "father": 8,
+    "class": "wessex anglo-saxon male ruler",
+    "birthday": "",
+    "deathday": ""
+  }
+]
 
-
-
-]`;
+`;
         
         
     var data = JSON.parse(json);
@@ -72,6 +171,26 @@
     
     
     // Add nodes
+    var i; //should be same as data[i].id
+    
+    for (i = 0; i < data.length; i++) { //sets a whole bunch of nodes
+        g.setNode("node-" + data[i].id, { label: data[i].name, class: data[i].class }); //create node
+    }
+    
+    // Add edges
+    
+    for (i = 0; i < data.length; i++) { //sets a whole bunch of edges
+        
+        if (mother !== "") { //if mother is not blank, draw line between mother and child
+            g.setEdge("node-" + data[data[i].mother], "node-" + data[i].id, { curve: d3.curveBasis });
+        }
+        if (father !== "") { //if father is not blank, draw line between father and child
+            g.setEdge("node-" + data[data[i].mother], "node-" + data[i].id, { curve: d3.curveBasis });
+        }
+    }
+    
+    
+    /* charles ii
     g.setNode("charles",          { label: "Charles II of Spain",               class: "male ruler" });
     g.setNode("philipiv",         { label: "Philip IV of Spain",                class: "male ruler" });
     g.setNode("marianaii",        { label: "Maria Anna of Austria",             class: "female" });
@@ -79,18 +198,14 @@
     g.setNode("margaret",         { label: "Margaret of Austria",               class: "female" });
     g.setNode("ferdinand",        { label: "Ferdinand III, Holy Roman Emperor", class: "male ruler" });
     g.setNode("marianai",         { label: "Maria Anna of Spain",               class: "female ruler" });
-    
-    
-    // Add edges
     g.setEdge("philipiv",         "charles",          { curve: d3.curveBasis });
     g.setEdge("marianaii",        "charles",          { curve: d3.curveBasis });
     g.setEdge("philipiii",        "philipiv",         { curve: d3.curveBasis });
     g.setEdge("margaret",         "philipiv",         { curve: d3.curveBasis });
     g.setEdge("ferdinand",        "marianaii",        { curve: d3.curveBasis });
     g.setEdge("marianai",         "marianaii",        { curve: d3.curveBasis });
+    */
     
-    
-    // ========> g.nodeEdges("charles");  <======== //
     // Set up an SVG group so that we can translate the final graph.
     var svg = d3.select('svg'),
         inner = svg.select('g');
