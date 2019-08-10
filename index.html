@@ -179,15 +179,17 @@
     }
     
     // Add edges
-    var mother = data[i].mother;
-    var father = data[i].father;
+    var mother;
+    var father;
     
     for (i = 0; i < data.length; i++) { //sets a whole bunch of edges
 
         if (mother !== "") { //if mother is not blank, draw line between mother and child
+            mother = data[i].mother
             g.setEdge("node-" + data[mother], "node-" + data[i].id, { curve: d3.curveBasis });
         }
         if (father !== "") { //if father is not blank, draw line between father and child
+            father = data[i].father
             g.setEdge("node-" + data[father], "node-" + data[i].id, { curve: d3.curveBasis });
         }
     }
