@@ -1,0 +1,35 @@
+/* styles for rectangle boxes */
+.node rect {
+    stroke: #000;
+    fill: #fff;
+    stroke-width: 1;
+}
+
+/* styles for edges */
+.edgePath path {
+    stroke: #000;
+}
+
+.d3 div {
+    display: block;
+    margin: 0 auto;
+}
+
+/* male has default border */
+g.male > rect {}
+
+/* female has dashed border */
+g.female > rect {
+    stroke-dasharray: 4 4;
+}
+
+/* rulers have bold border */
+g.ruler > rect {
+    stroke-width: 2;
+}
+
+/*
+
+colours per country planning
+
+*/
