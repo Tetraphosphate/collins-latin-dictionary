@@ -69,9 +69,8 @@
     var json = (function() {
         var json = null;
         $.ajax({
-            'async': false,
             'global': false,
-            'url': "/people/people.json",
+            'url': "./people/people.json",
             'dataType': "json",
             'success': function (data) {
                 json = data;
