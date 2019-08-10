@@ -179,14 +179,16 @@
     }
     
     // Add edges
+    var mother = data[i].mother;
+    var father = data[i].father;
     
     for (i = 0; i < data.length; i++) { //sets a whole bunch of edges
-        
-        if (data[i].mother !== "") { //if mother is not blank, draw line between mother and child
-            g.setEdge("node-" + data[(data[i].mother)], "node-" + data[i].id, { curve: d3.curveBasis });
+
+        if (mother !== "") { //if mother is not blank, draw line between mother and child
+            g.setEdge("node-" + data[mother], "node-" + data[i].id, { curve: d3.curveBasis });
         }
-        if (data[i].father !== "") { //if father is not blank, draw line between father and child
-            g.setEdge("node-" + data[(data[i].father)], "node-" + data[i].id, { curve: d3.curveBasis });
+        if (father !== "") { //if father is not blank, draw line between father and child
+            g.setEdge("node-" + data[father], "node-" + data[i].id, { curve: d3.curveBasis });
         }
     }
     
@@ -221,7 +223,7 @@
     
     
     
-    
+    /*
     var EDGE_DEFAULT_ATTRS = {
   arrowhead: "normal",
   lineInterpolate: "linear"
@@ -237,7 +239,7 @@
       _.defaults(edge, EDGE_DEFAULT_ATTRS);
     });
     
-    
+    */
     
     // Create the renderer
     var render = new dagreD3.render();
