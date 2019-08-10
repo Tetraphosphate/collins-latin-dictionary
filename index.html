@@ -187,10 +187,10 @@
         mother = data[i].mother;
         father = data[i].father;
         if (mother !== "") { //if mother is not blank, draw line between mother and child
-            console.log("mother" + mother);
+            g.setEdge("node-" + mother, "node-" + data[i].id, { curve: d3.curveBasis });
         }
         if (father !== "") { //if father is not blank, draw line between father and child
-            console.log("father" + father);
+            g.setEdge("node-" + father, "node-" + data[i].id, { curve: d3.curveBasis });
         }
     }
     
