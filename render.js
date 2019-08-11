@@ -64,4 +64,4 @@ var render = new dagreD3.render();
 // Run the renderer. This is what draws the final graph.
 render(d3.select('.d3 g'), g);
 var initialScale = 0.75;
-svg.call(zoom.transform, d3.zoomIdentity.translate((svg.attr("width") - g.graph().width * initialScale) / 2, 20).scale(initialScale));
+svg.call(zoom.transform, d3.zoomIdentity.translate(1000 - g.graph().width * initialScale) / 2, 20).scale(initialScale));
